@@ -1,0 +1,10 @@
+<%= image_tag(@flat.picture_url) %>
+<h2><%= @flat.name %></h2>
+<p>Address: <%= @flat.address %></p>
+<p><strong>Description:</strong> <%= @flat.description %></p>
+<h3>Price $: <%= @flat.price_per_night %></h3>
+<h4>Number of Guests: <%= @flat.number_of_guests %></h4>
+<%= link_to 'Back', flats_path %>
+<%= link_to 'All Flats', flats_path(@flats) %>
+<%= link_to 'Edit', edit_flat_path %>
+<%= link_to 'Delete', @flat, method: :delete, data: { confirm: 'Are you sure?' } %>
